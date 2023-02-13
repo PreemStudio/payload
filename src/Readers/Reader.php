@@ -2,19 +2,10 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Payload.
- *
- * (c) Brian Faust <hello@basecode.sh>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace PreemStudio\Payload\Readers;
 
-namespace BrianFaust\Payload\Readers;
-
-use BrianFaust\Payload\Exceptions\InvalidFileTypeException;
-use BrianFaust\Payload\Utils\File;
+use PreemStudio\Payload\Exceptions\InvalidFileTypeException;
+use PreemStudio\Payload\Utils\File;
 
 abstract class Reader
 {

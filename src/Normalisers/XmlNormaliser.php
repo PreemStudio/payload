@@ -2,26 +2,17 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Payload.
- *
- * (c) Brian Faust <hello@basecode.sh>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace PreemStudio\Payload\Normalisers;
 
-namespace BrianFaust\Payload\Normalisers;
-
-use BrianFaust\Payload\Contracts\Normaliser;
-use BrianFaust\Payload\Contracts\Serialiser;
-use BrianFaust\Payload\Contracts\Unserialiser;
-use BrianFaust\Payload\Readers\Reader;
-use BrianFaust\Payload\Readers\XmlReader;
-use BrianFaust\Payload\Serialisers\XmlSerialiser;
-use BrianFaust\Payload\Unserialisers\XmlUnserialiser;
-use BrianFaust\Payload\Writers\Writer;
-use BrianFaust\Payload\Writers\XmlWriter;
+use PreemStudio\Payload\Contracts\Normaliser;
+use PreemStudio\Payload\Contracts\Serialiser;
+use PreemStudio\Payload\Contracts\Unserialiser;
+use PreemStudio\Payload\Readers\Reader;
+use PreemStudio\Payload\Readers\XmlReader;
+use PreemStudio\Payload\Serialisers\XmlSerialiser;
+use PreemStudio\Payload\Unserialisers\XmlUnserialiser;
+use PreemStudio\Payload\Writers\Writer;
+use PreemStudio\Payload\Writers\XmlWriter;
 
 class XmlNormaliser implements Normaliser
 {

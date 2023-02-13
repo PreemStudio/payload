@@ -2,23 +2,14 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Payload.
- *
- * (c) Brian Faust <hello@basecode.sh>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-use BrianFaust\Payload\Arr;
-use BrianFaust\Payload\Csv;
-use BrianFaust\Payload\Ini;
-use BrianFaust\Payload\Json;
-use BrianFaust\Payload\Value;
-use BrianFaust\Payload\Xml;
-use BrianFaust\Payload\Yaml;
-use BrianFaust\Payload\YamlInline;
+use PreemStudio\Payload\Arr;
+use PreemStudio\Payload\Csv;
+use PreemStudio\Payload\Ini;
+use PreemStudio\Payload\Json;
+use PreemStudio\Payload\Value;
+use PreemStudio\Payload\Xml;
+use PreemStudio\Payload\Yaml;
+use PreemStudio\Payload\YamlInline;
 
 if (!function_exists('array_serialise')) {
     function array_serialise($input)

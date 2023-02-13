@@ -2,26 +2,17 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Payload.
- *
- * (c) Brian Faust <hello@basecode.sh>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace PreemStudio\Payload\Normalisers;
 
-namespace BrianFaust\Payload\Normalisers;
-
-use BrianFaust\Payload\Contracts\Normaliser;
-use BrianFaust\Payload\Contracts\Serialiser;
-use BrianFaust\Payload\Contracts\Unserialiser;
-use BrianFaust\Payload\Readers\CsvReader;
-use BrianFaust\Payload\Readers\Reader;
-use BrianFaust\Payload\Serialisers\CsvSerialiser;
-use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
-use BrianFaust\Payload\Writers\CsvWriter;
-use BrianFaust\Payload\Writers\Writer;
+use PreemStudio\Payload\Contracts\Normaliser;
+use PreemStudio\Payload\Contracts\Serialiser;
+use PreemStudio\Payload\Contracts\Unserialiser;
+use PreemStudio\Payload\Readers\CsvReader;
+use PreemStudio\Payload\Readers\Reader;
+use PreemStudio\Payload\Serialisers\CsvSerialiser;
+use PreemStudio\Payload\Unserialisers\CsvUnserialiser;
+use PreemStudio\Payload\Writers\CsvWriter;
+use PreemStudio\Payload\Writers\Writer;
 
 class CsvNormaliser implements Normaliser
 {
