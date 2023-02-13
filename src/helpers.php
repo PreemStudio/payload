@@ -35,7 +35,7 @@ if (! function_exists('array_read')) {
 if (! function_exists('array_write')) {
     function array_write(string $path, mixed $input)
     {
-        return (new Arr())->write(string $path, mixed $input);
+        return (new Arr())->write($path, $input);
     }
 }
 
@@ -63,7 +63,7 @@ if (! function_exists('csv_read')) {
 if (! function_exists('csv_write')) {
     function csv_write(string $path, mixed $input)
     {
-        return (new Csv())->write(string $path, mixed $input);
+        return (new Csv())->write($path, $input);
     }
 }
 
@@ -91,7 +91,7 @@ if (! function_exists('ini_read')) {
 if (! function_exists('ini_write')) {
     function ini_write(string $path, mixed $input)
     {
-        return (new Ini())->write(string $path, mixed $input);
+        return (new Ini())->write($path, $input);
     }
 }
 
@@ -119,7 +119,7 @@ if (! function_exists('json_read')) {
 if (! function_exists('json_write')) {
     function json_write(string $path, mixed $input)
     {
-        return (new Json())->write(string $path, mixed $input);
+        return (new Json())->write($path, $input);
     }
 }
 
@@ -147,7 +147,7 @@ if (! function_exists('value_read')) {
 if (! function_exists('value_write')) {
     function value_write(string $path, mixed $input)
     {
-        return (new Value())->write(string $path, mixed $input);
+        return (new Value())->write($path, $input);
     }
 }
 
@@ -175,7 +175,7 @@ if (! function_exists('xml_read')) {
 if (! function_exists('xml_write')) {
     function xml_write(string $path, mixed $input)
     {
-        return (new Xml())->write(string $path, mixed $input);
+        return (new Xml())->write($path, $input);
     }
 }
 
@@ -203,7 +203,7 @@ if (! function_exists('yaml_read')) {
 if (! function_exists('yaml_write')) {
     function yaml_write(string $path, mixed $input)
     {
-        return (new Yaml())->write(string $path, mixed $input);
+        return (new Yaml())->write($path, $input);
     }
 }
 
@@ -231,6 +231,6 @@ if (! function_exists('yaml_inline_read')) {
 if (! function_exists('yaml_inline_write')) {
     function yaml_inline_write(string $path, mixed $input)
     {
-        return (new YamlInline())->write(string $path, mixed $input);
+        return (new YamlInline())->write($path, $input);
     }
 }
