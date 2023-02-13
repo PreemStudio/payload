@@ -6,4 +6,5 @@ namespace PreemStudio\Payload\Exceptions;
 
 class InvalidFileTypeException extends PayloadException
 {
+    //
 }
