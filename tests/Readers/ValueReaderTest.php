@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Readers;
-
 use BrianFaust\Payload\Readers\ValueReader;
 
-class ValueReaderTest extends TestCase
-{
-    protected function getFileExtension(): string
-    {
-        return 'ser';
-    }
+uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
 
-    protected function getReader(): ValueReader
-    {
-        return new ValueReader();
-    }
+
+// Helpers
+function getFileExtension(): string
+{
+    return 'ser';
+}
+
+function getReader(): ValueReader
+{
+    return new ValueReader();
 }

@@ -11,21 +11,20 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Serialisers;
-
 use BrianFaust\Payload\Serialisers\ArraySerialiser;
 
-class ArraySerialiserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
+
+
+// Helpers
+function getExpectedOutput(): string
 {
-    protected function getExpectedOutput(): string
-    {
-        return "array (
+    return "array (
   'hello' => 'world',
 )";
-    }
+}
 
-    protected function getSerialiser(): ArraySerialiser
-    {
-        return new ArraySerialiser();
-    }
+function getSerialiser(): ArraySerialiser
+{
+    return new ArraySerialiser();
 }

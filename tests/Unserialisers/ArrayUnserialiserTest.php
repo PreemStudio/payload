@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Unserialisers;
-
 use BrianFaust\Payload\Unserialisers\ArrayUnserialiser;
 
-class ArrayUnserialiserTest extends TestCase
-{
-    protected function getInput(): string
-    {
-        return "array ( 'hello' => 'world', )";
-    }
+uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
 
-    protected function getUnserialiser(): ArrayUnserialiser
-    {
-        return new ArrayUnserialiser();
-    }
+
+// Helpers
+function getInput(): string
+{
+    return "array ( 'hello' => 'world', )";
+}
+
+function getUnserialiser(): ArrayUnserialiser
+{
+    return new ArrayUnserialiser();
 }

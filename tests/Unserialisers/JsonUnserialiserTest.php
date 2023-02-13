@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Unserialisers;
-
 use BrianFaust\Payload\Unserialisers\JsonUnserialiser;
 
-class JsonUnserialiserTest extends TestCase
-{
-    protected function getInput(): string
-    {
-        return '{"hello":"world"}';
-    }
+uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
 
-    protected function getUnserialiser(): JsonUnserialiser
-    {
-        return new JsonUnserialiser();
-    }
+
+// Helpers
+function getInput(): string
+{
+    return '{"hello":"world"}';
+}
+
+function getUnserialiser(): JsonUnserialiser
+{
+    return new JsonUnserialiser();
 }

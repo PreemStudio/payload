@@ -11,30 +11,29 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Unserialisers;
-
 use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
 
-class CsvUnserialiserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
+
+
+// Helpers
+function should_unserialise_input()
 {
-    public function should_unserialise_input()
-    {
-        $unserialiser = $this->getUnserialiser();
+    $unserialiser = test()->getUnserialiser();
 
-        $contents = $unserialiser->unserialise($this->getInput());
+    $contents = $unserialiser->unserialise(test()->getInput());
 
-        $this->assertEquals([['hello'], ['world']], $contents);
-    }
+    test()->assertEquals([['hello'], ['world']], $contents);
+}
 
-    protected function getInput(): string
-    {
-        return 'hello
+function getInput(): string
+{
+    return 'hello
 world
 ';
-    }
+}
 
-    protected function getUnserialiser(): CsvUnserialiser
-    {
-        return new CsvUnserialiser();
-    }
+function getUnserialiser(): CsvUnserialiser
+{
+    return new CsvUnserialiser();
 }

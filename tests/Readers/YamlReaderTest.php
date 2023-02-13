@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Readers;
-
 use BrianFaust\Payload\Readers\YamlReader;
 
-class YamlReaderTest extends TestCase
-{
-    protected function getFileExtension(): string
-    {
-        return 'yml';
-    }
+uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
 
-    protected function getReader(): YamlReader
-    {
-        return new YamlReader();
-    }
+
+// Helpers
+function getFileExtension(): string
+{
+    return 'yml';
+}
+
+function getReader(): YamlReader
+{
+    return new YamlReader();
 }

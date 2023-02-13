@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Readers;
-
 use BrianFaust\Payload\Readers\ArrayReader;
 
-class ArrayReaderTest extends TestCase
-{
-    protected function getFileExtension(): string
-    {
-        return 'php';
-    }
+uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
 
-    protected function getReader(): ArrayReader
-    {
-        return new ArrayReader();
-    }
+
+// Helpers
+function getFileExtension(): string
+{
+    return 'php';
+}
+
+function getReader(): ArrayReader
+{
+    return new ArrayReader();
 }

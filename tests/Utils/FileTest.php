@@ -11,61 +11,42 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Utils;
-
 use BrianFaust\Payload\Exceptions\FileDoesNotExistException;
 use BrianFaust\Payload\Utils\File;
-use PHPUnit\Framework\TestCase;
 
-class FileTest extends TestCase
-{
-    /** @test */
-    public function should_get_extension_from_path()
-    {
-        $this->assertEquals('json', File::extension('data.json'));
-    }
 
-    /** @test */
-    public function should_return_true_when_file_exists()
-    {
-        $this->assertTrue(File::exists(sprintf('%s/../stubs/data.json', __DIR__)));
-    }
+test('should get extension from path', function () {
+    $this->assertEquals('json', File::extension('data.json'));
+});
 
-    /** @test */
-    public function should_return_false_when_files_does_not_exist()
-    {
-        $this->assertFalse(File::exists('invalid.json'));
-    }
+test('should return true when file exists', function () {
+    $this->assertTrue(File::exists(sprintf('%s/../stubs/data.json', __DIR__)));
+});
 
-    /** @test */
-    public function should_throw_exception_when_getting_contents_of_file_that_does_not_exist()
-    {
-        $this->setExpectedException(FileDoesNotExistException::class);
+test('should return false when files does not exist', function () {
+    $this->assertFalse(File::exists('invalid.json'));
+});
 
-        File::contents('invalid.json');
-    }
+test('should throw exception when getting contents of file that does not exist', function () {
+    $this->setExpectedException(FileDoesNotExistException::class);
 
-    /** @test */
-    public function should_get_the_contents_of_a_file()
-    {
-        $contents = File::contents(sprintf('%s/../stubs/data.json', __DIR__));
+    File::contents('invalid.json');
+});
 
-        $this->assertEquals(json_encode(['hello' => 'world']), $contents);
-    }
+test('should get the contents of a file', function () {
+    $contents = File::contents(sprintf('%s/../stubs/data.json', __DIR__));
 
-    /** @test */
-    public function should_throw_exception_when_getting_file_that_does_not_exist()
-    {
-        $this->setExpectedException(FileDoesNotExistException::class);
+    $this->assertEquals(json_encode(['hello' => 'world']), $contents);
+});
 
-        File::get('invalid.json');
-    }
+test('should throw exception when getting file that does not exist', function () {
+    $this->setExpectedException(FileDoesNotExistException::class);
 
-    /** @test */
-    public function should_get_a_file()
-    {
-        $contents = File::get(sprintf('%s/../stubs/data.php', __DIR__));
+    File::get('invalid.json');
+});
 
-        $this->assertEquals(['hello' => 'world'], $contents);
-    }
-}
+test('should get a file', function () {
+    $contents = File::get(sprintf('%s/../stubs/data.php', __DIR__));
+
+    $this->assertEquals(['hello' => 'world'], $contents);
+});

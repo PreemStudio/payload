@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Serialisers;
-
 use BrianFaust\Payload\Serialisers\ValueSerialiser;
 
-class ValueSerialiserTest extends TestCase
-{
-    protected function getExpectedOutput(): string
-    {
-        return 'a:1:{s:5:"hello";s:5:"world";}';
-    }
+uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
 
-    protected function getSerialiser(): ValueSerialiser
-    {
-        return new ValueSerialiser();
-    }
+
+// Helpers
+function getExpectedOutput(): string
+{
+    return 'a:1:{s:5:"hello";s:5:"world";}';
+}
+
+function getSerialiser(): ValueSerialiser
+{
+    return new ValueSerialiser();
 }

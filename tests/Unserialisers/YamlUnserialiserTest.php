@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Unserialisers;
-
 use BrianFaust\Payload\Unserialisers\YamlUnserialiser;
 
-class YamlUnserialiserTest extends TestCase
-{
-    protected function getInput(): string
-    {
-        return 'hello: world';
-    }
+uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
 
-    protected function getUnserialiser(): YamlUnserialiser
-    {
-        return new YamlUnserialiser();
-    }
+
+// Helpers
+function getInput(): string
+{
+    return 'hello: world';
+}
+
+function getUnserialiser(): YamlUnserialiser
+{
+    return new YamlUnserialiser();
 }

@@ -11,14 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Normalisers;
-
 use BrianFaust\Payload\Normalisers\CsvNormaliser;
 
-class CsvNormaliserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Normalisers\TestCase::class);
+
+
+// Helpers
+function getNormaliser(): CsvNormaliser
 {
-    protected function getNormaliser(): CsvNormaliser
-    {
-        return new CsvNormaliser();
-    }
+    return new CsvNormaliser();
 }

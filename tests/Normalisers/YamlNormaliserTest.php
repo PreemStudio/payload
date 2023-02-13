@@ -11,14 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Normalisers;
-
 use BrianFaust\Payload\Normalisers\YamlNormaliser;
 
-class YamlNormaliserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Normalisers\TestCase::class);
+
+
+// Helpers
+function getNormaliser(): YamlNormaliser
 {
-    protected function getNormaliser(): YamlNormaliser
-    {
-        return new YamlNormaliser();
-    }
+    return new YamlNormaliser();
 }

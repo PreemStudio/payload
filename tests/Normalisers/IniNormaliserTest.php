@@ -11,14 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Normalisers;
-
 use BrianFaust\Payload\Normalisers\IniNormaliser;
 
-class IniNormaliserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Normalisers\TestCase::class);
+
+
+// Helpers
+function getNormaliser(): IniNormaliser
 {
-    protected function getNormaliser(): IniNormaliser
-    {
-        return new IniNormaliser();
-    }
+    return new IniNormaliser();
 }

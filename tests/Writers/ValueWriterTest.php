@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Writers;
-
 use BrianFaust\Payload\Writers\ValueWriter;
 
-class ValueWriterTest extends TestCase
-{
-    protected function getExpectedOutput(): string
-    {
-        return 'hello: world';
-    }
+uses(BrianFaust\Tests\Payload\Writers\TestCase::class);
 
-    protected function getWriter(): ValueWriter
-    {
-        return new ValueWriter();
-    }
+
+// Helpers
+function getExpectedOutput(): string
+{
+    return 'hello: world';
+}
+
+function getWriter(): ValueWriter
+{
+    return new ValueWriter();
 }

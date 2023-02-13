@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Unserialisers;
-
 use BrianFaust\Payload\Unserialisers\ValueUnserialiser;
 
-class ValueUnserialiserTest extends TestCase
-{
-    protected function getInput(): string
-    {
-        return 'a:1:{s:5:"hello";s:5:"world";}';
-    }
+uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
 
-    protected function getUnserialiser(): ValueUnserialiser
-    {
-        return new ValueUnserialiser();
-    }
+
+// Helpers
+function getInput(): string
+{
+    return 'a:1:{s:5:"hello";s:5:"world";}';
+}
+
+function getUnserialiser(): ValueUnserialiser
+{
+    return new ValueUnserialiser();
 }

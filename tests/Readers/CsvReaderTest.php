@@ -11,30 +11,29 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Readers;
-
 use BrianFaust\Payload\Readers\CsvReader;
 
-class CsvReaderTest extends TestCase
+uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
+
+
+// Helpers
+function should_read_file()
 {
-    public function should_read_file()
-    {
-        $reader = $this->getReader();
+    $reader = test()->getReader();
 
-        $contents = $reader->read(
-            sprintf('%s/../stubs/data.'.$this->getFileExtension(), __DIR__)
-        );
+    $contents = $reader->read(
+        sprintf('%s/../stubs/data.'.test()->getFileExtension(), __DIR__)
+    );
 
-        $this->assertEquals([['hello'], ['world']], $contents);
-    }
+    test()->assertEquals([['hello'], ['world']], $contents);
+}
 
-    protected function getFileExtension(): string
-    {
-        return 'csv';
-    }
+function getFileExtension(): string
+{
+    return 'csv';
+}
 
-    protected function getReader(): CsvReader
-    {
-        return new CsvReader();
-    }
+function getReader(): CsvReader
+{
+    return new CsvReader();
 }

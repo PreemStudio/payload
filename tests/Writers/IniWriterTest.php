@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Writers;
-
 use BrianFaust\Payload\Writers\IniWriter;
 
-class IniWriterTest extends TestCase
-{
-    protected function getExpectedOutput(): string
-    {
-        return 'hello: world';
-    }
+uses(BrianFaust\Tests\Payload\Writers\TestCase::class);
 
-    protected function getWriter(): IniWriter
-    {
-        return new IniWriter();
-    }
+
+// Helpers
+function getExpectedOutput(): string
+{
+    return 'hello: world';
+}
+
+function getWriter(): IniWriter
+{
+    return new IniWriter();
 }

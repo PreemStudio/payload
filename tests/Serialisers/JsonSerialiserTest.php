@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Serialisers;
-
 use BrianFaust\Payload\Serialisers\JsonSerialiser;
 
-class JsonSerialiserTest extends TestCase
-{
-    protected function getExpectedOutput(): string
-    {
-        return '{"hello":"world"}';
-    }
+uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
 
-    protected function getSerialiser(): JsonSerialiser
-    {
-        return new JsonSerialiser();
-    }
+
+// Helpers
+function getExpectedOutput(): string
+{
+    return '{"hello":"world"}';
+}
+
+function getSerialiser(): JsonSerialiser
+{
+    return new JsonSerialiser();
 }

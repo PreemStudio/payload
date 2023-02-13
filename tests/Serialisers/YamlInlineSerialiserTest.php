@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Serialisers;
-
 use BrianFaust\Payload\Serialisers\YamlInlineSerialiser;
 
-class YamlInlineSerialiserTest extends TestCase
-{
-    protected function getExpectedOutput(): string
-    {
-        return "hello: world\n";
-    }
+uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
 
-    protected function getSerialiser(): YamlInlineSerialiser
-    {
-        return new YamlInlineSerialiser();
-    }
+
+// Helpers
+function getExpectedOutput(): string
+{
+    return "hello: world\n";
+}
+
+function getSerialiser(): YamlInlineSerialiser
+{
+    return new YamlInlineSerialiser();
 }

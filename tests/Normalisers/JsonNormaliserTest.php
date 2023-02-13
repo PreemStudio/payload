@@ -11,14 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Normalisers;
-
 use BrianFaust\Payload\Normalisers\JsonNormaliser;
 
-class JsonNormaliserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Normalisers\TestCase::class);
+
+
+// Helpers
+function getNormaliser(): JsonNormaliser
 {
-    protected function getNormaliser(): JsonNormaliser
-    {
-        return new JsonNormaliser();
-    }
+    return new JsonNormaliser();
 }

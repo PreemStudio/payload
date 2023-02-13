@@ -11,28 +11,27 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Serialisers;
-
 use BrianFaust\Payload\Serialisers\XmlSerialiser;
 
-class XmlSerialiserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
+
+
+// Helpers
+function should_serialise_input()
 {
-    public function should_serialise_input()
-    {
-        $serialiser = $this->getSerialiser();
+    $serialiser = test()->getSerialiser();
 
-        $contents = $serialiser->serialise(['hello' => 'world']);
+    $contents = $serialiser->serialise(['hello' => 'world']);
 
-        $this->assertXmlStringEqualsXmlString($this->getExpectedOutput(), $contents);
-    }
+    test()->assertXmlStringEqualsXmlString(test()->getExpectedOutput(), $contents);
+}
 
-    protected function getExpectedOutput(): string
-    {
-        return '<?xml version="1.0"?><response><hello>world</hello></response>';
-    }
+function getExpectedOutput(): string
+{
+    return '<?xml version="1.0"?><response><hello>world</hello></response>';
+}
 
-    protected function getSerialiser(): XmlSerialiser
-    {
-        return new XmlSerialiser();
-    }
+function getSerialiser(): XmlSerialiser
+{
+    return new XmlSerialiser();
 }

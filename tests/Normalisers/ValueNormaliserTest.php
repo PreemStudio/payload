@@ -11,14 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Normalisers;
-
 use BrianFaust\Payload\Normalisers\ValueNormaliser;
 
-class ValueNormaliserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Normalisers\TestCase::class);
+
+
+// Helpers
+function getNormaliser(): ValueNormaliser
 {
-    protected function getNormaliser(): ValueNormaliser
-    {
-        return new ValueNormaliser();
-    }
+    return new ValueNormaliser();
 }

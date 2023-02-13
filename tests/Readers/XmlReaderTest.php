@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Readers;
-
 use BrianFaust\Payload\Readers\XmlReader;
 
-class XmlReaderTest extends TestCase
-{
-    protected function getFileExtension(): string
-    {
-        return 'xml';
-    }
+uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
 
-    protected function getReader(): XmlReader
-    {
-        return new XmlReader();
-    }
+
+// Helpers
+function getFileExtension(): string
+{
+    return 'xml';
+}
+
+function getReader(): XmlReader
+{
+    return new XmlReader();
 }

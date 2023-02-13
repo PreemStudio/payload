@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Writers;
-
 use BrianFaust\Payload\Writers\CsvWriter;
 
-class CsvWriterTest extends TestCase
-{
-    protected function getExpectedOutput(): string
-    {
-        return 'hello: world';
-    }
+uses(BrianFaust\Tests\Payload\Writers\TestCase::class);
 
-    protected function getWriter(): CsvWriter
-    {
-        return new CsvWriter();
-    }
+
+// Helpers
+function getExpectedOutput(): string
+{
+    return 'hello: world';
+}
+
+function getWriter(): CsvWriter
+{
+    return new CsvWriter();
 }

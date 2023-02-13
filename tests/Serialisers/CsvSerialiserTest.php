@@ -11,21 +11,20 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Serialisers;
-
 use BrianFaust\Payload\Serialisers\CsvSerialiser;
 
-class CsvSerialiserTest extends TestCase
+uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
+
+
+// Helpers
+function getExpectedOutput(): string
 {
-    protected function getExpectedOutput(): string
-    {
-        return 'hello
+    return 'hello
 world
 ';
-    }
+}
 
-    protected function getSerialiser(): CsvSerialiser
-    {
-        return new CsvSerialiser();
-    }
+function getSerialiser(): CsvSerialiser
+{
+    return new CsvSerialiser();
 }

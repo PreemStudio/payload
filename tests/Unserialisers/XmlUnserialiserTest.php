@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Unserialisers;
-
 use BrianFaust\Payload\Unserialisers\XmlUnserialiser;
 
-class XmlUnserialiserTest extends TestCase
-{
-    protected function getInput(): string
-    {
-        return '<?xml version="1.0"?><response><hello>world</hello></response>';
-    }
+uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
 
-    protected function getUnserialiser(): XmlUnserialiser
-    {
-        return new XmlUnserialiser();
-    }
+
+// Helpers
+function getInput(): string
+{
+    return '<?xml version="1.0"?><response><hello>world</hello></response>';
+}
+
+function getUnserialiser(): XmlUnserialiser
+{
+    return new XmlUnserialiser();
 }

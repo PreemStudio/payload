@@ -11,19 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Payload\Readers;
-
 use BrianFaust\Payload\Readers\IniReader;
 
-class IniReaderTest extends TestCase
-{
-    protected function getFileExtension(): string
-    {
-        return 'ini';
-    }
+uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
 
-    protected function getReader(): IniReader
-    {
-        return new IniReader();
-    }
+
+// Helpers
+function getFileExtension(): string
+{
+    return 'ini';
+}
+
+function getReader(): IniReader
+{
+    return new IniReader();
 }
