@@ -1,6 +1,6 @@
 {
     "name": "preemstudio/payload",
-    "description": "This is my package payload",
+    "description": "A package to easily (de)serialise various types of data.",
     "keywords": [
         "PreemStudio",
         "laravel",
