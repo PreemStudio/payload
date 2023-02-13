@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 use BrianFaust\Payload\Serialisers\XmlSerialiser;
 
-uses(BrianFaust\Tests\Payload\Serialisers\TestCase::class);
 
 
 // Helpers

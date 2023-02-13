@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 use BrianFaust\Payload\Readers\CsvReader;
 
-uses(BrianFaust\Tests\Payload\Readers\TestCase::class);
 
 
 // Helpers

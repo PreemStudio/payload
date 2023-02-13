@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
 
-uses(BrianFaust\Tests\Payload\Unserialisers\TestCase::class);
 
 
 // Helpers
