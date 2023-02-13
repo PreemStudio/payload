@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload\Serialisers;
 
-use PreemStudio\Payload\Contracts\Serialiser;
 use League\Csv\Writer;
+use PreemStudio\Payload\Contracts\Serialiser;
 
 class CsvSerialiser implements Serialiser
 {

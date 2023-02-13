@@ -25,7 +25,7 @@ class CsvUnserialiser implements Unserialiser
         //     $contents[$i] = array_combine($contents[0], $contents[$i]);
         // }
 
-        if (!is_null($class)) {
+        if (! is_null($class)) {
             return (new Mapper())->map($contents, $class);
         }
 

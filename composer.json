@@ -42,13 +42,15 @@
     },
     "autoload": {
         "psr-4": {
-            "PreemStudio\\Payload\\": "src",
-            "PreemStudio\\Payload\\Database\\Factories\\": "database/factories"
-        }
+            "PreemStudio\\Payload\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "PreemStudio\\Payload\\Tests\\": "tests"
+            "Tests\\": "tests"
         }
     },
     "scripts": {
