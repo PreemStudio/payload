@@ -10,7 +10,7 @@ class JsonReader extends Reader
 {
     protected $extensions = ['json'];
 
-    public function read($path, ?string $class = null): array
+    public function read(string $path, ?string $class = null): array
     {
         return (new JsonUnserialiser())->unserialise($this->contents($path), $class);
     }

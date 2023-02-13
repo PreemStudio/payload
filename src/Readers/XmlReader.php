@@ -10,7 +10,7 @@ class XmlReader extends Reader
 {
     protected $extensions = ['xml'];
 
-    public function read($path, ?string $class = null): array
+    public function read(string $path, ?string $class = null): array
     {
         return (new XmlUnserialiser())->unserialise($this->contents($path), $class);
     }

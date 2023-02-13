@@ -10,7 +10,7 @@ class CsvReader extends Reader
 {
     protected $extensions = ['csv'];
 
-    public function read($path, ?string $class = null): array
+    public function read(string $path, ?string $class = null): array
     {
         return (new CsvUnserialiser())->unserialise($this->contents($path), $class);
     }

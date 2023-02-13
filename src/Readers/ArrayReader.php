@@ -10,7 +10,7 @@ class ArrayReader extends Reader
 {
     protected $extensions = ['php'];
 
-    public function read($path, ?string $class = null): array
+    public function read(string $path, ?string $class = null): array
     {
         return (new ArrayUnserialiser())->unserialise($this->get($path), $class);
     }

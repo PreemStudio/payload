@@ -11,7 +11,7 @@ abstract class Reader
 {
     protected $extensions = [];
 
-    abstract public function read($path, ?string $class = null): array;
+    abstract public function read(string $path, ?string $class = null): array;
 
     public function check($path): bool
     {

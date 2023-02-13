@@ -30,7 +30,7 @@ class Arr
         return $this->normaliser->writer()->write($path, $input);
     }
 
-    public function read($path, ?string $class = null): array
+    public function read(string $path, ?string $class = null): array
     {
         return $this->normaliser->reader()->read($path, $class);
     }

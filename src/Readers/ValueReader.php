@@ -10,7 +10,7 @@ class ValueReader extends Reader
 {
     protected $extensions = ['ser'];
 
-    public function read($path, ?string $class = null): array
+    public function read(string $path, ?string $class = null): array
     {
         return (new ValueUnserialiser())->unserialise($this->contents($path), $class);
     }
