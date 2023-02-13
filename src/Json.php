@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload;
 
+use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\JsonNormaliser;
 
 class Json
 {
-    protected $normaliser;
+    protected Normaliser $normaliser;
 
     public function __construct()
     {
