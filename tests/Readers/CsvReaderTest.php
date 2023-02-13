@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 use BrianFaust\Payload\Readers\CsvReader;
 
-
-
 // Helpers
 function should_read_file()
 {

@@ -14,7 +14,6 @@ declare(strict_types=1);
 use BrianFaust\Payload\Exceptions\FileDoesNotExistException;
 use BrianFaust\Payload\Utils\File;
 
-
 test('should get extension from path', function () {
     expect(File::extension('data.json'))->toEqual('json');
 });

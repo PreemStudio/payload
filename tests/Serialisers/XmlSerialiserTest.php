@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 use BrianFaust\Payload\Serialisers\XmlSerialiser;
 
-
-
 // Helpers
 function should_serialise_input()
 {

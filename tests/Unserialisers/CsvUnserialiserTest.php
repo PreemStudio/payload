@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
 
-
-
 // Helpers
 function should_unserialise_input()
 {
