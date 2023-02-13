@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PreemStudio\Payload\Writers;
+
+use PreemStudio\Payload\Utils\File;
+
+abstract class Writer
+{
+    abstract public function write(string $path, mixed $input): bool;
+
+    public function put(string $path, string $contents): bool
+    {
+        return (bool) File::put($path, $contents);
+    }
+}
