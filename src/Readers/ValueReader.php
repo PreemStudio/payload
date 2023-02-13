@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\ValueUnserialiser;
 
 class ValueReader extends Reader
 {
-    protected $extensions = ['ser'];
+    protected array $extensions = ['ser'];
 
     public function read(string $path, ?string $class = null): array
     {

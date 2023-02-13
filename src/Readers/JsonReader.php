@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\JsonUnserialiser;
 
 class JsonReader extends Reader
 {
-    protected $extensions = ['json'];
+    protected array $extensions = ['json'];
 
     public function read(string $path, ?string $class = null): array
     {

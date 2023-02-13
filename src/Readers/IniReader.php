@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\IniUnserialiser;
 
 class IniReader extends Reader
 {
-    protected $extensions = ['ini'];
+    protected array $extensions = ['ini'];
 
     public function read(string $path, ?string $class = null): array
     {

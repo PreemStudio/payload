@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\CsvUnserialiser;
 
 class CsvReader extends Reader
 {
-    protected $extensions = ['csv'];
+    protected array $extensions = ['csv'];
 
     public function read(string $path, ?string $class = null): array
     {

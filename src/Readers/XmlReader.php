@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\XmlUnserialiser;
 
 class XmlReader extends Reader
 {
-    protected $extensions = ['xml'];
+    protected array $extensions = ['xml'];
 
     public function read(string $path, ?string $class = null): array
     {

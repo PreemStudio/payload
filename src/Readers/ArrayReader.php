@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\ArrayUnserialiser;
 
 class ArrayReader extends Reader
 {
-    protected $extensions = ['php'];
+    protected array $extensions = ['php'];
 
     public function read(string $path, ?string $class = null): array
     {

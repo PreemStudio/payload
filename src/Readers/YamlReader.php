@@ -8,7 +8,7 @@ use PreemStudio\Payload\Unserialisers\YamlUnserialiser;
 
 class YamlReader extends Reader
 {
-    protected $extensions = ['yaml', 'yml'];
+    protected array $extensions = ['yaml', 'yml'];
 
     public function read(string $path, ?string $class = null): array
     {

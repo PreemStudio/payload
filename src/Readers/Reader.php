@@ -9,7 +9,7 @@ use PreemStudio\Payload\Utils\File;
 
 abstract class Reader
 {
-    protected $extensions = [];
+    protected array $extensions = [];
 
     abstract public function read(string $path, ?string $class = null): array;
 
