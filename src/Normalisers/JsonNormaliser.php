@@ -16,13 +16,13 @@ use PreemStudio\Payload\Writers\Writer;
 
 class JsonNormaliser implements Normaliser
 {
-    protected $serialiser;
+    protected Serialiser $serialiser;
 
-    protected $unserialiser;
+    protected Unserialiser $unserialiser;
 
-    protected $writer;
+    protected Writer $writer;
 
-    protected $reader;
+    protected Reader $reader;
 
     public function serialiser(): Serialiser
     {
