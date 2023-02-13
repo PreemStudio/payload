@@ -8,7 +8,7 @@ use PreemStudio\Payload\Serialisers\XmlSerialiser;
 
 class XmlWriter extends Writer
 {
-    public function write($path, $input): bool
+    public function write(string $path, mixed $input): bool
     {
         return $this->put($path, (new XmlSerialiser())->serialise($input));
     }

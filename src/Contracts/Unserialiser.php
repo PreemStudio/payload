@@ -6,5 +6,5 @@ namespace PreemStudio\Payload\Contracts;
 
 interface Unserialiser
 {
-    public function unserialise($input, ?string $class = null): array;
+    public function unserialise(mixed $input, ?string $class = null): array;
 }

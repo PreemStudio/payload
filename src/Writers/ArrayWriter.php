@@ -8,7 +8,7 @@ use PreemStudio\Payload\Serialisers\ArraySerialiser;
 
 class ArrayWriter extends Writer
 {
-    public function write($path, $input): bool
+    public function write(string $path, mixed $input): bool
     {
         $contents = (new ArraySerialiser())->serialise($input);
 

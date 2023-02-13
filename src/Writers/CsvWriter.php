@@ -8,7 +8,7 @@ use PreemStudio\Payload\Serialisers\CsvSerialiser;
 
 class CsvWriter extends Writer
 {
-    public function write($path, $input): bool
+    public function write(string $path, mixed $input): bool
     {
         return $this->put($path, (new CsvSerialiser())->serialise($input));
     }

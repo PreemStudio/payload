@@ -9,7 +9,7 @@ use PreemStudio\Payload\Utils\Mapper;
 
 class ArrayUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ?string $class = null): array
+    public function unserialise(mixed $input, ?string $class = null): array
     {
         if (! is_array($input)) {
             $input = eval("return $input;");

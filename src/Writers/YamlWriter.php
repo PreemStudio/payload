@@ -8,7 +8,7 @@ use PreemStudio\Payload\Serialisers\YamlSerialiser;
 
 class YamlWriter extends Writer
 {
-    public function write($path, $input): bool
+    public function write(string $path, mixed $input): bool
     {
         return $this->put($path, (new YamlSerialiser())->serialise($input));
     }

@@ -15,22 +15,22 @@ class Arr
         $this->normaliser = new ArrayNormaliser();
     }
 
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         return $this->normaliser->serialiser()->serialise($input);
     }
 
-    public function unserialise($input, ?string $class = null): array
+    public function unserialise(mixed $input, ?string $class = null): array
     {
         return $this->normaliser->unserialiser()->unserialise($input, $class);
     }
 
-    public function write($path, $input): bool
+    public function write(string $path, mixed $input): bool
     {
         return $this->normaliser->writer()->write($path, $input);
     }
 
-    public function read($input, ?string $class = null): array
+    public function read($path, ?string $class = null): array
     {
         return $this->normaliser->reader()->read($path, $class);
     }

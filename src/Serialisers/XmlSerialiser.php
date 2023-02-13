@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Serializer as SymfonySerialiser;
 
 class XmlSerialiser implements Serialiser
 {
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         return (new SymfonySerialiser(
             [new ObjectNormalizer()], [new XmlEncoder()]

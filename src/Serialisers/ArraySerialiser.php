@@ -8,7 +8,7 @@ use PreemStudio\Payload\Contracts\Serialiser;
 
 class ArraySerialiser implements Serialiser
 {
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         return var_export($input, true);
     }

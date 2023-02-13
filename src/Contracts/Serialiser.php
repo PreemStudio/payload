@@ -6,5 +6,5 @@ namespace PreemStudio\Payload\Contracts;
 
 interface Serialiser
 {
-    public function serialise($input): string;
+    public function serialise(mixed $input): string;
 }

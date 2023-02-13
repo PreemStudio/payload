@@ -10,7 +10,7 @@ use PreemStudio\Payload\Utils\Mapper;
 
 class CsvUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ?string $class = null): array
+    public function unserialise(mixed $input, ?string $class = null): array
     {
         $reader = Reader::createFromString($input);
 

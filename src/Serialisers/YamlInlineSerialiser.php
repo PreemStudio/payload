@@ -9,7 +9,7 @@ use Symfony\Component\Yaml\Dumper;
 
 class YamlInlineSerialiser implements Serialiser
 {
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         return (new Dumper())->dump($input, true);
     }

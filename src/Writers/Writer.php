@@ -8,7 +8,7 @@ use PreemStudio\Payload\Utils\File;
 
 abstract class Writer
 {
-    abstract public function write($path, $input): bool;
+    abstract public function write(string $path, mixed $input): bool;
 
     public function put($path, $contents): bool
     {

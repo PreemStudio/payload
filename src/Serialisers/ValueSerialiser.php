@@ -8,7 +8,7 @@ use PreemStudio\Payload\Contracts\Serialiser;
 
 class ValueSerialiser implements Serialiser
 {
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         return serialize($input);
     }

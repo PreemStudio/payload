@@ -9,7 +9,7 @@ use PreemStudio\Payload\Contracts\Serialiser;
 
 class CsvSerialiser implements Serialiser
 {
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         $writer = Writer::createFromString('');
 

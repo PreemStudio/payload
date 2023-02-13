@@ -9,7 +9,7 @@ use PreemStudio\Payload\Utils\IniBuilder;
 
 class IniSerialiser implements Serialiser
 {
-    public function serialise($input): string
+    public function serialise(mixed $input): string
     {
         return (new IniBuilder())->build($input);
     }

@@ -9,7 +9,7 @@ use PreemStudio\Payload\Utils\Mapper;
 
 class IniUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ?string $class = null): array
+    public function unserialise(mixed $input, ?string $class = null): array
     {
         $contents = json_decode(json_encode(parse_ini_string($input, true)));
 
