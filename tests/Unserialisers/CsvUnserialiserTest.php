@@ -23,7 +23,7 @@ function should_unserialise_input()
 
     $contents = $unserialiser->unserialise(test()->getInput());
 
-    test()->assertEquals([['hello'], ['world']], $contents);
+    expect($contents)->toEqual([['hello'], ['world']]);
 }
 
 function getInput(): string

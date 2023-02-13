@@ -25,7 +25,7 @@ function should_read_file()
         sprintf('%s/../stubs/data.'.test()->getFileExtension(), __DIR__)
     );
 
-    test()->assertEquals([['hello'], ['world']], $contents);
+    expect($contents)->toEqual([['hello'], ['world']]);
 }
 
 function getFileExtension(): string
