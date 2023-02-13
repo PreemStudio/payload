@@ -10,7 +10,7 @@ abstract class Writer
 {
     abstract public function write(string $path, mixed $input): bool;
 
-    public function put($path, $contents): bool
+    public function put(string $path, string $contents): bool
     {
         return (bool) File::put($path, $contents);
     }

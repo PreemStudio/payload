@@ -36,7 +36,7 @@ class File
         throw new FileDoesNotExistException(sprintf('%s is not a valid file', $path));
     }
 
-    public static function put($path, $contents): bool
+    public static function put(string $path, string $contents): bool
     {
         return (bool) file_put_contents($path, $contents);
     }

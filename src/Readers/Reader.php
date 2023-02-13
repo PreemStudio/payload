@@ -13,7 +13,7 @@ abstract class Reader
 
     abstract public function read(string $path, ?string $class = null): array;
 
-    public function check($path): bool
+    public function check(string $path): bool
     {
         $extension = File::extension($path);
 
@@ -25,14 +25,14 @@ abstract class Reader
         return true;
     }
 
-    public function contents($path): ?string
+    public function contents(string $path): ?string
     {
         if ($this->check($path)) {
             return File::contents($path);
         }
     }
 
-    public function get($path): ?array
+    public function get(string $path): ?array
     {
         if ($this->check($path)) {
             return File::get($path);
