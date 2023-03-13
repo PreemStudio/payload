@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\ValueDeserialiser;
 
-class ValueReader extends Reader
+final class ValueReader extends Reader
 {
     public array $extensions = ['ser'];
 

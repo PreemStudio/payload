@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Writers;
 
 use PreemStudio\Payload\Serialisers\YamlSerialiser;
 
-class YamlWriter extends Writer
+final class YamlWriter extends Writer
 {
     public function write(string $path, mixed $input): bool
     {

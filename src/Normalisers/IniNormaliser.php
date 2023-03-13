@@ -14,7 +14,7 @@ use PreemStudio\Payload\Serialisers\IniSerialiser;
 use PreemStudio\Payload\Writers\IniWriter;
 use PreemStudio\Payload\Writers\Writer;
 
-class IniNormaliser implements Normaliser
+final class IniNormaliser implements Normaliser
 {
     public function serialiser(): Serialiser
     {

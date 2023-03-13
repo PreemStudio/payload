@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\IniDeserialiser;
 
-class IniReader extends Reader
+final class IniReader extends Reader
 {
     public array $extensions = ['ini'];
 

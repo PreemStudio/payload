@@ -9,7 +9,7 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer as SymfonySerialiser;
 
-class XmlSerialiser implements Serialiser
+final class XmlSerialiser implements Serialiser
 {
     public function serialise(mixed $input): string
     {

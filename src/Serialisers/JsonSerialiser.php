@@ -9,7 +9,7 @@ use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer as SymfonySerialiser;
 
-class JsonSerialiser implements Serialiser
+final class JsonSerialiser implements Serialiser
 {
     public function serialise(mixed $input): string
     {

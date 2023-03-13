@@ -7,7 +7,7 @@ namespace PreemStudio\Payload\Serialisers;
 use PreemStudio\Payload\Contracts\Serialiser;
 use PreemStudio\Payload\Utils\IniBuilder;
 
-class IniSerialiser implements Serialiser
+final class IniSerialiser implements Serialiser
 {
     public function serialise(mixed $input): string
     {

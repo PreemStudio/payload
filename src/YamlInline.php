@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\YamlInlineNormaliser;
 
-class YamlInline
+final class YamlInline
 {
     protected Normaliser $normaliser;
 

@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Writers;
 
 use PreemStudio\Payload\Serialisers\CsvSerialiser;
 
-class CsvWriter extends Writer
+final class CsvWriter extends Writer
 {
     public function write(string $path, mixed $input): bool
     {

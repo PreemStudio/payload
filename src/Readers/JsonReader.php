@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\JsonDeserialiser;
 
-class JsonReader extends Reader
+final class JsonReader extends Reader
 {
     public array $extensions = ['json'];
 

@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\ValueNormaliser;
 
-class Value
+final class Value
 {
     protected Normaliser $normaliser;
 

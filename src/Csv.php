@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\CsvNormaliser;
 
-class Csv
+final class Csv
 {
     protected Normaliser $normaliser;
 

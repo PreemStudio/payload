@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload\Utils;
 
-class IniBuilder
+final class IniBuilder
 {
     public function build(array $data, $depth = 0, $prevKey = null)
     {

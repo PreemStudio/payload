@@ -14,7 +14,7 @@ use PreemStudio\Payload\Serialisers\CsvSerialiser;
 use PreemStudio\Payload\Writers\CsvWriter;
 use PreemStudio\Payload\Writers\Writer;
 
-class CsvNormaliser implements Normaliser
+final class CsvNormaliser implements Normaliser
 {
     public function serialiser(): Serialiser
     {

@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Utils;
 
 use PreemStudio\Payload\Exceptions\FileDoesNotExistException;
 
-class File
+final class File
 {
     public static function extension($path): string
     {

@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Writers;
 
 use PreemStudio\Payload\Serialisers\IniSerialiser;
 
-class IniWriter extends Writer
+final class IniWriter extends Writer
 {
     public function write(string $path, mixed $input): bool
     {

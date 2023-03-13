@@ -14,7 +14,7 @@ use PreemStudio\Payload\Serialisers\XmlSerialiser;
 use PreemStudio\Payload\Writers\Writer;
 use PreemStudio\Payload\Writers\XmlWriter;
 
-class XmlNormaliser implements Normaliser
+final class XmlNormaliser implements Normaliser
 {
     public function serialiser(): Serialiser
     {

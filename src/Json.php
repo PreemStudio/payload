@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\JsonNormaliser;
 
-class Json
+final class Json
 {
     protected Normaliser $normaliser;
 

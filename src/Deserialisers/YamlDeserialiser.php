@@ -8,7 +8,7 @@ use PreemStudio\Payload\Contracts\Deserialiser;
 use PreemStudio\Payload\Utils\Mapper;
 use Symfony\Component\Yaml\Yaml;
 
-class YamlDeserialiser implements Deserialiser
+final class YamlDeserialiser implements Deserialiser
 {
     public function deserialise(mixed $input, ?string $class = null): array
     {

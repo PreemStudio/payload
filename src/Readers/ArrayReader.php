@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\ArrayDeserialiser;
 
-class ArrayReader extends Reader
+final class ArrayReader extends Reader
 {
     public array $extensions = ['php'];
 

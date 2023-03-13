@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\XmlDeserialiser;
 
-class XmlReader extends Reader
+final class XmlReader extends Reader
 {
     public array $extensions = ['xml'];
 

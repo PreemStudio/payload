@@ -7,7 +7,7 @@ namespace PreemStudio\Payload\Serialisers;
 use PreemStudio\Payload\Contracts\Serialiser;
 use Symfony\Component\Yaml\Dumper;
 
-class YamlSerialiser implements Serialiser
+final class YamlSerialiser implements Serialiser
 {
     public function serialise(mixed $input): string
     {

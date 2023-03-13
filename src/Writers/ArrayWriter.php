@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Writers;
 
 use PreemStudio\Payload\Serialisers\ArraySerialiser;
 
-class ArrayWriter extends Writer
+final class ArrayWriter extends Writer
 {
     public function write(string $path, mixed $input): bool
     {

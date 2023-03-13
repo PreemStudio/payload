@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\IniNormaliser;
 
-class Ini
+final class Ini
 {
     protected Normaliser $normaliser;
 

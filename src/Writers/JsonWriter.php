@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Writers;
 
 use PreemStudio\Payload\Serialisers\JsonSerialiser;
 
-class JsonWriter extends Writer
+final class JsonWriter extends Writer
 {
     public function write(string $path, mixed $input): bool
     {

@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Serialisers;
 
 use PreemStudio\Payload\Contracts\Serialiser;
 
-class ValueSerialiser implements Serialiser
+final class ValueSerialiser implements Serialiser
 {
     public function serialise(mixed $input): string
     {

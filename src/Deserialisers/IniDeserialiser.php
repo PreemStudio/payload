@@ -7,7 +7,7 @@ namespace PreemStudio\Payload\Deserialisers;
 use PreemStudio\Payload\Contracts\Deserialiser;
 use PreemStudio\Payload\Utils\Mapper;
 
-class IniDeserialiser implements Deserialiser
+final class IniDeserialiser implements Deserialiser
 {
     public function deserialise(mixed $input, ?string $class = null): array
     {

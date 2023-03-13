@@ -14,7 +14,7 @@ use PreemStudio\Payload\Serialisers\YamlSerialiser;
 use PreemStudio\Payload\Writers\Writer;
 use PreemStudio\Payload\Writers\YamlWriter;
 
-class YamlNormaliser implements Normaliser
+final class YamlNormaliser implements Normaliser
 {
     public function serialiser(): Serialiser
     {

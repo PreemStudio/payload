@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload\Utils;
 
-class Mapper
+final class Mapper
 {
     public function map($input, $class)
     {

@@ -14,7 +14,7 @@ use PreemStudio\Payload\Serialisers\ValueSerialiser;
 use PreemStudio\Payload\Writers\ValueWriter;
 use PreemStudio\Payload\Writers\Writer;
 
-class ValueNormaliser implements Normaliser
+final class ValueNormaliser implements Normaliser
 {
     public function serialiser(): Serialiser
     {

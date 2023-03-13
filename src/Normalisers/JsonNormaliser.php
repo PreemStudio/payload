@@ -14,7 +14,7 @@ use PreemStudio\Payload\Serialisers\JsonSerialiser;
 use PreemStudio\Payload\Writers\JsonWriter;
 use PreemStudio\Payload\Writers\Writer;
 
-class JsonNormaliser implements Normaliser
+final class JsonNormaliser implements Normaliser
 {
     public function serialiser(): Serialiser
     {

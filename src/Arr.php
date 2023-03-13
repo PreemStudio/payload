@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\ArrayNormaliser;
 
-class Arr
+final class Arr
 {
     protected Normaliser $normaliser;
 

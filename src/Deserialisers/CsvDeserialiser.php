@@ -8,7 +8,7 @@ use League\Csv\Reader;
 use PreemStudio\Payload\Contracts\Deserialiser;
 use PreemStudio\Payload\Utils\Mapper;
 
-class CsvDeserialiser implements Deserialiser
+final class CsvDeserialiser implements Deserialiser
 {
     public function deserialise(mixed $input, ?string $class = null): array
     {

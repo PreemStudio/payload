@@ -7,7 +7,7 @@ namespace PreemStudio\Payload\Serialisers;
 use League\Csv\Writer;
 use PreemStudio\Payload\Contracts\Serialiser;
 
-class CsvSerialiser implements Serialiser
+final class CsvSerialiser implements Serialiser
 {
     public function serialise(mixed $input): string
     {

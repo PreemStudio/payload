@@ -7,7 +7,7 @@ namespace PreemStudio\Payload;
 use PreemStudio\Payload\Contracts\Normaliser;
 use PreemStudio\Payload\Normalisers\XmlNormaliser;
 
-class Xml
+final class Xml
 {
     protected Normaliser $normaliser;
 

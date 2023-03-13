@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\CsvDeserialiser;
 
-class CsvReader extends Reader
+final class CsvReader extends Reader
 {
     public array $extensions = ['csv'];
 

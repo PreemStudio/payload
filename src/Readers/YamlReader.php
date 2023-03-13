@@ -6,7 +6,7 @@ namespace PreemStudio\Payload\Readers;
 
 use PreemStudio\Payload\Deserialisers\YamlDeserialiser;
 
-class YamlReader extends Reader
+final class YamlReader extends Reader
 {
     public array $extensions = ['yml', 'yaml'];
 
