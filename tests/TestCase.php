@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
+use PreemStudio\Jetpack\TestBench\AbstractTestCase;
 
-abstract class TestCase extends Orchestra
+abstract class TestCase extends AbstractTestCase
 {
     //
 }
