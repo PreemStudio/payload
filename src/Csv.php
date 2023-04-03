@@ -4,35 +4,38 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload;
 
-use PreemStudio\Payload\Contracts\Normaliser;
-use PreemStudio\Payload\Normalisers\CsvNormaliser;
+use League\Csv\Reader;
+use League\Csv\Writer;
 
-final class Csv
+final class Csv extends AbstractNormalizer
 {
-    protected Normaliser $normaliser;
-
-    public function __construct()
+    public function encode(mixed $contents): string
     {
-        $this->normaliser = new CsvNormaliser;
+        $writer = Writer::createFromString('');
+
+        if (\is_array(\reset($contents))) {
+            $writer->insertOne(\array_keys(\reset($contents)));
+        } else {
+            $writer->insertOne(\array_keys($contents));
+        }
+
+        if (\is_array(\reset($contents))) {
+            $writer->insertAll($contents);
+        } else {
+            $writer->insertOne($contents);
+        }
+
+        return $writer->toString();
     }
 
-    public function serialise(mixed $input): string
+    public function decode(mixed $contents): array
     {
-        return $this->normaliser->serialiser()->serialise($input);
-    }
+        $result = [];
 
-    public function deserialise(mixed $input, ?string $class = null): array
-    {
-        return $this->normaliser->deserialiser()->deserialise($input, $class);
-    }
+        foreach (Reader::createFromString($contents) as $record) {
+            $result[] = $record;
+        }
 
-    public function write(string $path, mixed $input): bool
-    {
-        return $this->normaliser->writer()->write($path, $input);
-    }
-
-    public function read(string $path, ?string $class = null): array
-    {
-        return $this->normaliser->reader()->read($path, $class);
+        return $result;
     }
 }

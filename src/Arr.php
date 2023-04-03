@@ -4,35 +4,24 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload;
 
-use PreemStudio\Payload\Contracts\Normaliser;
-use PreemStudio\Payload\Normalisers\ArrayNormaliser;
-
-final class Arr
+final class Arr extends AbstractNormalizer
 {
-    protected Normaliser $normaliser;
-
-    public function __construct()
+    public function encode(mixed $contents): string
     {
-        $this->normaliser = new ArrayNormaliser;
+        return \var_export($contents, true);
     }
 
-    public function serialise(mixed $input): string
+    public function decode(mixed $contents): array
     {
-        return $this->normaliser->serialiser()->serialise($input);
+        if (\is_array($contents)) {
+            return $contents;
+        }
+
+        return eval("return {$contents};");
     }
 
-    public function deserialise(mixed $input, ?string $class = null): array
+    public function write(string $path, mixed $contents): bool
     {
-        return $this->normaliser->deserialiser()->deserialise($input, $class);
-    }
-
-    public function write(string $path, mixed $input): bool
-    {
-        return $this->normaliser->writer()->write($path, $input);
-    }
-
-    public function read(string $path, ?string $class = null): array
-    {
-        return $this->normaliser->reader()->read($path, $class);
+        return File::put($path, '<?php return '.$this->encode($contents).';');
     }
 }

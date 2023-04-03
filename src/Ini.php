@@ -4,35 +4,76 @@ declare(strict_types=1);
 
 namespace PreemStudio\Payload;
 
-use PreemStudio\Payload\Contracts\Normaliser;
-use PreemStudio\Payload\Normalisers\IniNormaliser;
-
-final class Ini
+final class Ini extends AbstractNormalizer
 {
-    protected Normaliser $normaliser;
-
-    public function __construct()
+    public function encode(mixed $contents): string
     {
-        $this->normaliser = new IniNormaliser;
+        return $this->build($contents);
     }
 
-    public function serialise(mixed $input): string
+    public function decode(mixed $contents): array
     {
-        return $this->normaliser->serialiser()->serialise($input);
+        return \json_decode(\json_encode(\parse_ini_string($contents, true)), true, \JSON_THROW_ON_ERROR);
     }
 
-    public function deserialise(mixed $input, ?string $class = null): array
+    private function build(array $data, $depth = 0, $prevKey = null)
     {
-        return $this->normaliser->deserialiser()->deserialise($input, $class);
+        $valueOutput = null;
+        $arrayOutput = null;
+
+        $position = 0;
+
+        foreach ($data as $key => $val) {
+            if (\is_array($val)) {
+                if ($depth === 0) {
+                    $arrayOutput .= "\n[{$key}]\n";
+                }
+
+                $arrayOutput .= $this->build($val, $depth + 1, $key);
+            } else {
+                $valStr = $this->escape($val);
+
+                if ($depth > 1) {
+                    if ($key !== $position) {
+                        if (\ctype_digit((string) $key)) {
+                            $position = $key;
+                        }
+
+                        $valueOutput .= "{$prevKey}[{$key}] = {$valStr}\n";
+                    } else {
+                        $valueOutput .= "{$prevKey}[] = {$valStr}\n";
+                    }
+
+                    $position++;
+                } else {
+                    $valueOutput .= "{$key} = {$valStr}\n";
+                }
+            }
+        }
+
+        $output = "{$valueOutput}\n{$arrayOutput}";
+
+        return $depth ? \ltrim($output) : \trim($output);
     }
 
-    public function write(string $path, mixed $input): bool
+    private function escape($value)
     {
-        return $this->normaliser->writer()->write($path, $input);
-    }
+        $value = (string) $value;
 
-    public function read(string $path, ?string $class = null): array
-    {
-        return $this->normaliser->reader()->read($path, $class);
+        if (empty($value)) {
+            return 'false';
+        } elseif ($value === '1') {
+            return 'true';
+        }
+
+        if (\is_numeric($value)) {
+            return (string) $value;
+        }
+
+        if (\is_string($value) && \ctype_alnum($value) && !\is_numeric($value)) {
+            return (string) $value;
+        }
+
+        return \var_export($value, true);
     }
 }
