@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use Exception;
 use BombenProdukt\Payload\File;
+use Exception;
 
 test('should throw exception when getting contents of file that does not exist', function (): void {
     File::get('invalid.json');
