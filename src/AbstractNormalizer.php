@@ -8,10 +8,6 @@ use BombenProdukt\Payload\Contracts\Normalizer;
 
 abstract class AbstractNormalizer implements Normalizer
 {
-    abstract public function encode(mixed $contents): string;
-
-    abstract public function decode(mixed $contents): array;
-
     public function write(string $path, mixed $contents): bool
     {
         return File::put($path, $this->encode($contents));
@@ -21,4 +17,8 @@ abstract class AbstractNormalizer implements Normalizer
     {
         return $this->decode(File::get($path));
     }
+
+    abstract public function encode(mixed $contents): string;
+
+    abstract public function decode(mixed $contents): array;
 }
