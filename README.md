@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/BombenProdukt/payload/actions">
+    <a href="https://github.com/faustbrian/payload/actions">
         <img src="https://badge.sh/github/check-runs/BombenProdukt/payload" alt="Checks" />
     </a>
     <a href="https://packagist.org/packages/bombenprodukt/payload">
@@ -21,7 +21,7 @@
 
 ## About Payload
 
-This project was created by, and is maintained by [BombenProdukt](https://github.com/BombenProdukt), and is a package to easily (de)serialise various types of data with PHP. Be sure to browse through the [changelog](CHANGELOG.md), [code of conduct](.github/CODE_OF_CONDUCT.md), [contribution guidelines](.github/CONTRIBUTING.md), [license](LICENSE), and [security policy](.github/SECURITY.md).
+This project was created by, and is maintained by [Brian Faust](https://github.com/faustbrian), and is a package to easily (de)serialise various types of data with PHP. Be sure to browse through the [changelog](CHANGELOG.md), [code of conduct](.github/CODE_OF_CONDUCT.md), [contribution guidelines](.github/CONTRIBUTING.md), [license](LICENSE), and [security policy](.github/SECURITY.md).
 
 ## Installation
 
