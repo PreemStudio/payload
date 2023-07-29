@@ -36,6 +36,21 @@ parameters:
 			path: src/File.php
 
 		-
+			message: "#^Call to function is_string\\(\\) with non\\-falsy\\-string will always evaluate to true\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Casting to string something that's already string\\.$#"
+			count: 2
+			path: src/Ini.php
+
+		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
 			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:build\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: src/Ini.php
