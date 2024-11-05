@@ -1,0 +1,156 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Part \\$contents \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 1
+			path: src/Arr.php
+
+		-
+			message: "#^Parameter \\#1 \\$array of function array_keys expects array, mixed given\\.$#"
+			count: 1
+			path: src/Csv.php
+
+		-
+			message: "#^Parameter \\#1 \\$array of function reset expects array\\|object, mixed given\\.$#"
+			count: 3
+			path: src/Csv.php
+
+		-
+			message: "#^Parameter \\#1 \\$content of static method League\\\\Csv\\\\AbstractCsv\\:\\:createFromString\\(\\) expects string\\|Stringable, mixed given\\.$#"
+			count: 1
+			path: src/Csv.php
+
+		-
+			message: "#^Parameter \\#1 \\$record of method League\\\\Csv\\\\Writer\\:\\:insertOne\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/Csv.php
+
+		-
+			message: "#^Parameter \\#1 \\$records of method League\\\\Csv\\\\Writer\\:\\:insertAll\\(\\) expects iterable, mixed given\\.$#"
+			count: 1
+			path: src/Csv.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function trim expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/File.php
+
+		-
+			message: "#^Call to function is_string\\(\\) with non\\-falsy\\-string will always evaluate to true\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Casting to string something that's already string\\.$#"
+			count: 2
+			path: src/Ini.php
+
+		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:build\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:build\\(\\) has parameter \\$depth with no type specified\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:build\\(\\) has parameter \\$prevKey with no type specified\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:decode\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:escape\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Ini\\:\\:escape\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of method BombenProdukt\\\\Payload\\\\Ini\\:\\:build\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Parameter \\#1 \\$ini_string of function parse_ini_string expects string, mixed given\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/Ini.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Json\\:\\:decode\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Json.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Json\\:\\:encode\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: src/Json.php
+
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, mixed given\\.$#"
+			count: 1
+			path: src/Json.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Value\\:\\:decode\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Value.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of function unserialize expects string, mixed given\\.$#"
+			count: 1
+			path: src/Value.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Xml\\:\\:decode\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Xml.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of function simplexml_load_string expects string, mixed given\\.$#"
+			count: 1
+			path: src/Xml.php
+
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/Xml.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\Yaml\\:\\:decode\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Yaml.php
+
+		-
+			message: "#^Parameter \\#1 \\$input of static method Symfony\\\\Component\\\\Yaml\\\\Yaml\\:\\:parse\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Yaml.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Payload\\\\YamlInline\\:\\:decode\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/YamlInline.php
+
+		-
+			message: "#^Parameter \\#1 \\$input of static method Symfony\\\\Component\\\\Yaml\\\\Yaml\\:\\:parse\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/YamlInline.php
