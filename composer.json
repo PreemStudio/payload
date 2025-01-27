@@ -18,14 +18,14 @@
     "require": {
         "php": "^8.3",
         "basecodeoy/laravel-package-powerpack": "^1.0.0",
-        "league/csv": "^9.18",
+        "league/csv": "^9.21",
         "netresearch/jsonmapper": "^4.5",
-        "symfony/property-access": "^7.1.6",
-        "symfony/serializer": "^7.1.8",
-        "symfony/yaml": "^7.1.6"
+        "symfony/property-access": "^7.2.0",
+        "symfony/serializer": "^7.2.0",
+        "symfony/yaml": "^7.2.0"
     },
     "require-dev": {
-        "basecodeoy/standards": "^1.0.5"
+        "basecodeoy/standards": "^1.1.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
